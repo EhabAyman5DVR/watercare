@@ -10,20 +10,7 @@
     <script src="Build/Build.loader.js"></script>
     <script>
 
-      let stream;
-async function startCamera() {
-  if (!stream) {
-    stream = await navigator.mediaDevices.getUserMedia({ video:true, audio:false });
-    document.querySelector("#cam").srcObject = stream;
-  }
-}
-function pauseCamera() {
-  document.querySelector("#cam").pause(); // keeps stream alive
-}
-function stopCamera() {
-  stream?.getTracks().forEach(t => t.stop());
-  stream = null;
-}
+   
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
